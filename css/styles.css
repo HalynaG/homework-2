@@ -44,10 +44,22 @@ body {
     color: var(--white-color);
 }
 
-/* <!--Навігація -->*/
-.link.current {
-    color: var(--accent-color);
+/* <!--hidden--> */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
+
+/* <!--Навігація -->*/
 
 .header-list,
 .hero .list,
@@ -69,7 +81,10 @@ list-style: none;
     
 }
 .navigation .link {
-color: var(--primary-text-color);
+color: var(--primary-text-color);}
+
+.link.current {
+    color: var(--accent-color);
 
 }
 .navigation .link:hover,
@@ -80,8 +95,12 @@ color: var(--primary-text-color);
 }
 
 .header-item {
-    color: var(--primary-subtitle-color);
+color: var(--primary-subtitle-color);
 text-decoration: none;
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
 }
 
 
@@ -109,10 +128,12 @@ text-decoration: none;
     border: inherit;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
     color: var(--white-color);
+    font-family: Roboto,
+    sans-serif;
     background-color: var(--accent-color);
 }
 
@@ -121,11 +142,11 @@ text-decoration: none;
     background-color: var(--button-hover-color);
 }
 
-.member-title {
+.specifics .member-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    text-transform: uppercase;
+   
 }
 
 .subtitle {
@@ -153,6 +174,9 @@ text-align: center;
 .team .member-title {
     font-weight: 500;
     text-align: center;
+    font-size: 16px;
+    line-height: 1.19;
+   
 }
 
 .team .member-position {
@@ -192,6 +216,8 @@ font-style: normal;
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
+    font-family: Roboto,
+    sans-serif;
   background-color: var(--portfolio-btn-color);
 }
 
